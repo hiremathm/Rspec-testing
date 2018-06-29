@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :orders
+  resources :users
+  resources :projects
   resources :albums, only: [:index]
-  root 'albums#index'
+  root 'orders#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
